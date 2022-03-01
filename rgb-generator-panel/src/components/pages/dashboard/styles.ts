@@ -7,11 +7,16 @@ type ResultColorProps = {
 };
 
 export const Container = styled.main`
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+  @media (max-width: 768px) {
+    max-width: 714px;
+  }
 `;
 
 export const Content = styled.div`
