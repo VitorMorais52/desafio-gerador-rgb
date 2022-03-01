@@ -7,7 +7,6 @@ type ResultColorProps = {
 };
 
 export const Container = styled.main`
-  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -16,7 +15,13 @@ export const Container = styled.main`
 `;
 
 export const Content = styled.div`
-  width: 714px;
+  margin: 2rem;
+  @media (min-width: 768px) {
+    width: 714px;
+  }
+  @media (max-width: 768px) {
+    max-width: 714px;
+  }
   color: white;
   font-size: 18px;
 
@@ -31,7 +36,12 @@ export const Content = styled.div`
 
   .colors {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     gap: 1rem;
     justify-content: space-between;
     margin: 0 2rem;
